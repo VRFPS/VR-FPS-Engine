@@ -1,6 +1,5 @@
 <html>
   <head>
-    <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
     <script src="bundle/bundle.js"></script>
   </head>
 
@@ -16,6 +15,10 @@
 
         <!-- Floor image can be anything -->
         <img id="floor" src="assets/images/floor.jpg" crossOrigin="anonymous">
+
+         <a-mixin id="red" material="color: blue"></a-mixin>
+        <a-mixin id="candle" geometry="primitive: sphere" light></a-mixin>
+
       </a-assets>
 
       <!-- render ground -->
@@ -29,6 +32,10 @@
                 geometry="primitive:sphere; radius:30; phiLength:360; phiStart:0; thetaLength:90"
                 material="shader:flat; side:back; height:2048; src:#skymap; width:2048">
               </a-entity>
+      <a-entity entity-generator="mixin: red box"></a-entity>
+      <a-entity id="box" geometry="primitive: box"
+                    random-position random-rotation random-scale></a-entity>
+      <a-entity enemy="message: Hello, Metaverse!"></a-entity>
     </a-scene>
   </body>
 </html>

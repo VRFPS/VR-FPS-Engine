@@ -27,6 +27,8 @@
     "webpack-dev-server": "^1.16.1"
   },
   "dependencies": {
-    "aframe": "^0.4.1"
+    "aframe": "^0.4.1",
+    "aframe-entity-generator-component": "^3.0.0",
+    "aframe-randomizer-components": "^3.0.1"
   }
 }
