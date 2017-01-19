@@ -1,0 +1,32 @@
+{
+  "name": "cabbage-blaster",
+  "version": "1.0.0",
+  "description": "Sick VR game",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "start": "webpack-dev-server --host 0.0.0.0 --progress --colors --hot -d --open --inline",
+    "lint": "semistandard -v | snazzy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dye784/Cabbage-Blaster.git"
+  },
+  "keywords": [],
+  "author": "Bogdan Polovko, Damon Ye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dye784/Cabbage-Blaster/issues"
+  },
+  "homepage": "https://github.com/dye784/Cabbage-Blaster#readme",
+  "devDependencies": {
+    "cross-env": "^2.0.1",
+    "semistandard": "^9.0.0",
+    "snazzy": "^4.0.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
+  },
+  "dependencies": {
+    "aframe": "^0.4.1"
+  }
+}
