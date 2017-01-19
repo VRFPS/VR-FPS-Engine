@@ -2,45 +2,44 @@
 AFRAME.registerComponent('entity-generator', {
   schema: {
     mixin: {default: ''},
-    num: {default: 10}
+    num: {default: 5}
   },
 
   init: function () {
+    let f = () => {
 
+      var data = this.data;
+      for (var i = 0; i < data.num; i++) {
+        var entity = document.createElement('a-entity');
+        entity.setAttribute('mixin', data.mixin);
+        this.el.appendChild(entity);
+      }
+    }
 
-    // Create entities with supplied mixin.
-    // const queue = () => {
+    function delay(t) {
+       return new Promise(function(resolve) {
+           return setTimeout(resolve, t)
+       });
+    }
 
-    // };
-    this.tick(5000)
+    delay(10000)
+    .then(() => {
+      f()
+      return delay(10000)
+    })
+    .then(() => {
+      f()
+      return delay(10000)
+    })
+    .then(() => {
+      f()
+      return delay(10000)
+    })
+    .then(() => {
+      f()
+      return delay(10000)
+    });
   }
 
-  tick: function (time, delta) {
-    var data = this.data;
-    var entity = document.createElement('a-entity');
-    entity.setAttribute('mixin', data.mixin);
-    this.el.appendChild(entity);
-  }
 
-    // for (var i = 0; i < data.num; i++) {
-    //   queue = queue.then(() => {
-    //     return setTimeout(queue, 5000)
-    //   })
-    // }
-
-    // return queue();
-
-    // Promise.resolve(setTimeout(queue, 5000))
-    //   .then(() => Promise.resolve(setTimeout(queue, 5000)))
-    //   .then(() => Promise.resolve(setTimeout(queue, 5000)))
-    //   .then(() => Promise.resolve(setTimeout(queue, 5000)))
-    //   .then(() => Promise.resolve(setTimeout(queue, 5000)))
-    //   .then(() => Promise.resolve(setTimeout(queue, 5000)))
-    //   .then(() => Promise.resolve(setTimeout(queue, 5000)))
-    //   .then(() => Promise.resolve(setTimeout(queue, 5000)))
-    //   .then(() => Promise.resolve(setTimeout(queue, 5000)))
-    //   .then(() => Promise.resolve(setTimeout(queue, 5000)))
-    //   .then(() => Promise.resolve(setTimeout(queue, 5000)))
-    //   .then(() => Promise.resolve(setTimeout(queue, 5000)))
-  // }
 });
