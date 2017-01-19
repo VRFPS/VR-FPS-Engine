@@ -5,9 +5,13 @@ require('aframe');
 // require('./gameState');
 
 // Import entity generator
-require('aframe-entity-generator-component');
+
+
+// aframe randomizing components
 require('aframe-randomizer-components');
-require('./enemies');
+
+// require('aframe-entity-generator-component');
+require('./enemie');
 
 // AFRAME.registerComponent('entity-generator', {
 //   schema: {
