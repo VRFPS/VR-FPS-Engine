@@ -6,14 +6,10 @@ AFRAME.registerComponent('bullet', {
   },
 
   init: function () {
-    // let f = () => {
+        var entity = document.createElement('a-sphere');
+        entity.setAttribute('radius', '0.5');
+        entity.setAttribute('radius', 'property: position; dur: 3000;delay: 2000 from: 2 2 5; to: 85 50 -20');
 
-    //   var data = this.data;
-    //   for (var i = 0; i < data.num; i++) {
-        var entity = document.createElement('a-entity');
-        entity.setAttribute('mixin', data.mixin);
         this.el.appendChild(entity);
-      // }
-    // }
   }
 });

@@ -5,7 +5,7 @@
 
   <!-- Set background color to cover for the difference between sky and floor -->
   <body style="background-color: #030404">
-    <a-scene>
+    <a-scene id="scene">
 
     <!-- Set asset images here then render it using a-entity with id later -->
       <a-assets>
@@ -30,31 +30,30 @@
 
       <!-- render sky -->
       <a-entity id="sky"
-                geometry="primitive:sphere; radius:50; phiLength:360; phiStart:0; thetaLength:90"
+                geometry="primitive:sphere; radius:100; phiLength:360; phiStart:0; thetaLength:90"
                 material="shader:flat; side:back; height:2048; src:#skymap; width:2048">
-              </a-entity>
-      <!-- <a-entity entity-generator="mixin: green candle position; num: 9;"></a-entity> -->
+      </a-entity>
+      <a-entity entity-generator="mixin: green candle position; num: 9;"></a-entity>
 
-      <a-sphere color="#F55" radius="1"
-                animation="property: position; dur: 1000;
-                                 from: 0 0 0; to: -20 20 20">
+      <a-sphere color="#F55" radius="0.5"
+                animation="property: position; dur: 3000; from: 2 2 5; to: 85 50 -20">
+      </a-sphere>
+  <!--     <a-sphere color="#F55" radius="1"
+                animation="property: position; dur: 3000;
+                                 delay: 2000 from: 0 5 -5; to: 0 8 -50">
       </a-sphere>
       <a-sphere color="#F55" radius="1"
-                animation="property: position; dur: 1000;
-                                 from: 0 0 0; to: 4 10 6">
+                animation="property: position; dur: 3000;
+                                 delay: 2000 from: 2 2 5; to: 3 -3 -19">
       </a-sphere>
       <a-sphere color="#F55" radius="1"
-                animation="property: position; dur: 1000;
-                                 from: 0 0 0; to: 3 -3 -19">
+                animation="property: position; dur: 3000;
+                                 delay: 2000 from: 2 2 5; to: 10 10 -10">
       </a-sphere>
       <a-sphere color="#F55" radius="1"
-                animation="property: position; dur: 1000;
-                                 from: 0 0 0; to: 10 10 -10">
-      </a-sphere>
-      <a-sphere color="#F55" radius="1"
-                animation="property: position; dur: 1000;
-                                 from: 0 0 0; to: -3 10 10">
-      </a-sphere>
+                animation="property: position; dur: 3000;
+                                 delay: 2000 from: 2 2 5; to: -3 10 10">
+      </a-sphere> -->
     </a-scene>
   </body>
 </html>

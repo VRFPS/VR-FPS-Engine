@@ -13,3 +13,5 @@ require('aframe-animation-component');
 
 // require('aframe-entity-generator-component');
 require('./components/enemy');
+require('./systems/bulletSys')
+

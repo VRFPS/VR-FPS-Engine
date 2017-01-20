@@ -16,32 +16,29 @@ AFRAME.registerComponent('entity-generator', {
       }
     }
 
-    // function delay(t) {
-    //    return new Promise(function(resolve) {
-    //        return setTimeout(resolve, t)
-    //    });
-    // }
-    // let a =
-    setInterval(f, 5000)
-    // setTimeout(clearInterval(a), 15000)
-    // clearInterval(a)
-    // delay(10000)
-    // .then(() => {
-    //   f()
-    //   return delay(10000)
-    // })
-    // .then(() => {
-    //   f()
-    //   return delay(10000)
-    // })
-    // .then(() => {
-    //   f()
-    //   return delay(10000)
-    // })
-    // .then(() => {
-    //   f()
-    //   return delay(10000)
-    // });
+    function delay(t) {
+       return new Promise(function(resolve) {
+           return setTimeout(resolve, t)
+       });
+    }
+
+    delay(10000)
+    .then(() => {
+      f()
+      return delay(10000)
+    })
+    .then(() => {
+      f()
+      return delay(10000)
+    })
+    .then(() => {
+      f()
+      return delay(10000)
+    })
+    .then(() => {
+      f()
+      return delay(10000)
+    });
   }
 
 
