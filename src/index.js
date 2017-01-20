@@ -11,7 +11,9 @@ require('aframe');
 require('aframe-randomizer-components');
 require('aframe-animation-component');
 
-// require('aframe-entity-generator-component');
-require('./components/enemy');
-require('./systems/bulletSys')
+require('aframe-entity-generator-component');
+require('./components/click-listener');
+// require('./components/collider');
+require('./components/projectile');
+require('./components/spawner');
 
