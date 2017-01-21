@@ -3,7 +3,7 @@ AFRAME.registerComponent('click-listener', {
     var el = this.el;
     window.addEventListener('keyup', function (evt) {
       if (evt.keyCode == 32 )
-      el.emit('click', null, false);
+      el.emit('click');
     });
   }
 });

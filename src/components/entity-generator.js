@@ -1,7 +1,7 @@
 AFRAME.registerComponent('entity-generator', {
   schema: {
     mixin: {default: ''},
-    num: {default: 1000}
+    num: {default: 10}
   },
 
   init: function () {

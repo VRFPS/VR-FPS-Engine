@@ -8,7 +8,7 @@ AFRAME.registerComponent('projectile', {
       this.targets = [];
       this.ticks = 0;
       for (var i = 0; i < enemies.length; i++) {
-        this.targets.push(enemies[i].object3D);
+        this.targets.push(enemies[i]);
       }
       // console.log(this.targets)
       // console.log(this.el.object3D)
@@ -29,33 +29,32 @@ AFRAME.registerComponent('projectile', {
       return distance < 0.15;
     }
 
-    let el = this.el;
+    let bullet = this.el;
     // console.log(el.object3D.position.length())
-      if (el.object3D.position.length() > 38 && el.parentEl) el.parentNode.removeChild(el)
-      else if(this.targets.length !== 0 && el.parentEl) {
-      // for (let i = 0; i < this.targets.length; i++ ) {
-
-      // }
-      this.targets[0].position
-      let box = {
-        minX: this.targets[0].position.x - 2,
-        minY: this.targets[0].position.y - 2,
-        minZ: this.targets[0].position.z - 2,
-        maxX: this.targets[0].position.x + 2,
-        maxY: this.targets[0].position.y + 2,
-        maxZ: this.targets[0].position.z + 2
-      }
-      let sphere = this.el.object3D.translateY(this.data.speed).position
-      // console.log(sphere)
-      if(intersect(sphere, box)) {
-        let target = document.querySelector('.enemy');
-        target.parentNode.removeChild(target)
-        el.parentNode.removeChild(el)
-        this.targets.shift();
-      }
+      if (bullet.object3D.position.length() > 100 && bullet.parentEl) bullet.parentNode.removeChild(bullet)
+      else if(this.targets.length !== 0 && bullet.parentEl) {
+        for (let i = 0; i < this.targets.length; i++ ) {
+          let currentEnemy = this.targets[i].object3D
+          let box = {
+            minX: currentEnemy.position.x - 2,
+            minY: currentEnemy.position.y - 2,
+            minZ: currentEnemy.position.z - 2,
+            maxX: currentEnemy.position.x + 2,
+            maxY: currentEnemy.position.y + 2,
+            maxZ: currentEnemy.position.z + 2
+          }
+          let sphere = bullet.object3D.translateY(this.data.speed).position
+          // console.log(sphere)
+          if(intersect(sphere, box)) {
+            let target = this.targets[i];
+            target.parentNode.removeChild(target)
+            bullet.parentNode.removeChild(bullet)
+            this.targets.splice(i, 1);
+            return;
+          }
+        }
     }
-
-    this.el.object3D.translateY(this.data.speed)
+    bullet.object3D.translateY(this.data.speed)
   }
 });
 

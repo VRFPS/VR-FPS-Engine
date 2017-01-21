@@ -50,12 +50,12 @@
 //   }
 // });
 
-AFRAME.registerComponent('collider-check', {
-    schema: {
+// AFRAME.registerComponent('collider-check', {
+//     schema: {
 
-    },
-    init: function () {
+//     },
+//     init: function () {
 
-    },// this.el.object3D.updateMatrixWorld();
+//     },// this.el.object3D.updateMatrixWorld();
 
-});
+// });

@@ -11,7 +11,7 @@ require('aframe');
 require('aframe-randomizer-components');
 require('aframe-animation-component');
 
-require('aframe-entity-generator-component');
+require('./components/entity-generator');
 require('./components/click-listener');
 require('./components/collider');
 require('./components/projectile');

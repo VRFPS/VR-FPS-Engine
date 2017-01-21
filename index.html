@@ -11,14 +11,15 @@
         <img id="floor" src="assets/images/floor.jpg" crossOrigin="anonymous">
 
          <a-mixin id="green" material="color: green"></a-mixin>
-         <a-mixin id="candle" geometry="primitive: box" light></a-mixin>
-         <a-mixin id="position" random-spherical-position="radius: 40; startX: 0; lengthX: 360; startY: 0; lengthY: 360" random-position="min: -40 3 -40; max: 30 40 30" random-scale></a-mixin>
+         <a-mixin id="candle" geometry="primitive: box; width: 4; height: 4; depth: 4;" light></a-mixin>
+         <a-mixin id="position" random-spherical-position="radius: 40; startX: 0; lengthX: 360; startY: 0; lengthY: 360" random-position="min: -40 3 -40; max: 30 40 30"></a-mixin>
 
          <a-mixin id="laser"
                  geometry="primitive: sphere; radius: 0.15"
                  material="color: red; metalness: 0.2; opacity: 0.4; roughness: 0.3; side: double"
                  rotation="90 0 0"
-                 projectile="speed: -0.05" collider-check="target: .enemy"></a-mixin>
+                 projectile="speed: -0.1" collider-check="target: .enemy"></a-mixin>
+         <a-mixin ></a-mixin>
       </a-assets>
 
       <!-- ============================ ASSETS ============================================================ -->
@@ -32,15 +33,15 @@
                 material="shader:flat; side:back; height:2048; src:#skymap; width:2048">
       </a-entity>
 
-      <!-- <a-entity entity-generator="mixin: green candle position; num: 9;"></a-entity> -->
+      <a-entity entity-generator="mixin: green candle position; num: 9;"></a-entity>
 
       <a-camera id="player" position="1 1.8 0" spawner="mixin: laser; on: click"
                 click-listener></a-camera>
 
-                <a-entity id="player" raycaster-intersected collider-check>
+                <!-- <a-entity id="player" raycaster-intersected collider-check>
                   <a-entity raycaster="objects: .collidable" position="0 2 0" rotation="90 0 0"></a-entity>
                 </a-entity>
-                <a-entity class="enemy" geometry="primitive: box; width: 4; height: 4; depth: 4;" position="0 2 0"></a-entity>
+                <a-entity class="enemy" geometry="primitive: box; width: 4; height: 4; depth: 4;" position="0 2 0"></a-entity> -->
 
     </a-scene>
   </body>
