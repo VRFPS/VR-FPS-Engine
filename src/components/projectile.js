@@ -10,12 +10,12 @@ AFRAME.registerComponent('projectile', {
       for (var i = 0; i < enemies.length; i++) {
         this.targets.push(enemies[i].object3D);
       }
+      // console.log(this.targets)
+      // console.log(this.el.object3D)
+      // console.log(this.el.sceneEl.)
     },
-  remove: function() {
-    this.el.removeObject3D('projectile');
-  },
-  tick: function () {
 
+  tick: function () {
     let intersect = (sphere, box) => {
       // get box closest point to sphere center by clamping
       var x = Math.max(box.minX, Math.min(sphere.x, box.maxX));
@@ -28,8 +28,14 @@ AFRAME.registerComponent('projectile', {
                                (z - sphere.z) * (z - sphere.z));
       return distance < 0.15;
     }
+
     let el = this.el;
-    if(this.targets[0] && el.parentEl) {
+    // console.log(el.object3D.position.length())
+      if (el.object3D.position.length() > 38 && el.parentEl) el.parentNode.removeChild(el)
+      else if(this.targets.length !== 0 && el.parentEl) {
+      // for (let i = 0; i < this.targets.length; i++ ) {
+
+      // }
       this.targets[0].position
       let box = {
         minX: this.targets[0].position.x - 2,
@@ -40,12 +46,19 @@ AFRAME.registerComponent('projectile', {
         maxZ: this.targets[0].position.z + 2
       }
       let sphere = this.el.object3D.translateY(this.data.speed).position
+      // console.log(sphere)
       if(intersect(sphere, box)) {
         let target = document.querySelector('.enemy');
         target.parentNode.removeChild(target)
         el.parentNode.removeChild(el)
+        this.targets.shift();
       }
     }
 
+    this.el.object3D.translateY(this.data.speed)
   }
 });
+
+// var ray = new THREE.Raycaster( originPoint, directionVector.clone().normalize() );
+//       var collisionResults = ray.intersectObjects( sceneEl.object3D.children, true );
+//       collisionResults.forEach(hit);
