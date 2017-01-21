@@ -13,7 +13,6 @@ require('aframe-animation-component');
 
 require('aframe-entity-generator-component');
 require('./components/click-listener');
-// require('./components/collider');
+require('./components/collider');
 require('./components/projectile');
 require('./components/spawner');
-
