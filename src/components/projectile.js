@@ -46,10 +46,12 @@ AFRAME.registerComponent('projectile', {
           let sphere = bullet.object3D.translateY(this.data.speed).position
           // console.log(sphere)
           if(intersect(sphere, box)) {
+            this.gameScore++;
             let target = this.targets[i];
             target.parentNode.removeChild(target)
             bullet.parentNode.removeChild(bullet)
             this.targets.splice(i, 1);
+            console.log(this.gameScore)
             return;
           }
         }
