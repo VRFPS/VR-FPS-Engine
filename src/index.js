@@ -9,7 +9,7 @@ var gameScore = 0;
 
 
 // aframe randomizing components
-require('aframe-extras');
+
 require('aframe-randomizer-components');
 require('aframe-animation-component');
 

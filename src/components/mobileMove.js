@@ -1,6 +1,6 @@
 
-function createButton(context, func){
-    var button = document.createElement('button');
+function createButton(context){
+    var button = document.createElement('a-entity');
     button.style.cssText = `
     background: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg…28.58C245.82%2C12.34%2C233.93%2C0%2C218.19%2C0H27.27Z%22%2F%3E%3C%2Fsvg%3E) 50% 50%/70% 70% no-repeat rgba(0,0,0,.35);
     border: 0;
@@ -15,19 +15,16 @@ function createButton(context, func){
     -webkit-transition: background-color .05s ease;
     z-index: 9999;
     left: 50px;`
-    button.onclick = func;
+
     button.className = 'move-forward';
+    button.setAttribute('mobileClick-listener', '')
+    button.setAttribute('spawner', "mixin: laser; on: fire;")
     context.appendChild(button);
 }
 
 window.onload = function(){
   setTimeout(() => {
-    createButton(document.querySelector('.a-enter-vr'), function(){
-            console.log('This is pressed')
-            var press = jQuery.Event("keydown");
-            press.ctrlKey = false;
-            press.which = 87;
-            $(window).trigger(press)
-    })
+    createButton(document.getElementById('scene'))
   }, 2000)
 }
+

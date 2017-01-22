@@ -2,6 +2,7 @@
   <head>
     <script src="bundle/bundle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.2.2/dist/aframe-extras.min.js"></script>
   </head>
   <body style="background-color: #030404">
     <a-scene id="scene">
@@ -36,7 +37,7 @@
 
       <a-entity entity-generator="mixin: green candle position; num: 9;"></a-entity>
 
-      <a-camera id="player" position="1 1.8 0" spawner="mixin: laser; on: click"
+      <a-camera id="player" universal-controls position="1 1.8 0" spawner="mixin: laser; on: fire"
                 click-listener></a-camera>
 
                 <!-- <a-entity id="player" raycaster-intersected collider-check>
