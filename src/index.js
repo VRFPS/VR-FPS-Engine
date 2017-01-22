@@ -2,16 +2,10 @@
 require('aframe');
 
 var gameScore = 0;
-// import game state
-// require('./gameState');
-
-// Import entity generator
-
-
-// aframe randomizing components
 
 require('aframe-randomizer-components');
 require('aframe-animation-component');
+require('aframe-particle-system-component')
 
 require('./components/mobileMove');
 require('./components/entity-generator');

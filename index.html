@@ -35,15 +35,12 @@
                 material="shader:flat; side:back; height:2048; src:#skymap; width:2048">
       </a-entity>
 
+      <a-entity position="0 2.25 -15" particle-system="preset: snow"></a-entity>
+
       <a-entity entity-generator="mixin: green candle position; num: 9;"></a-entity>
 
       <a-camera id="player" universal-controls position="1 1.8 0" spawner="mixin: laser; on: fire"
                 click-listener></a-camera>
-
-                <!-- <a-entity id="player" raycaster-intersected collider-check>
-                  <a-entity raycaster="objects: .collidable" position="0 2 0" rotation="90 0 0"></a-entity>
-                </a-entity>
-                <a-entity class="enemy" geometry="primitive: box; width: 4; height: 4; depth: 4;" position="0 2 0"></a-entity> -->
 
     </a-scene>
   </body>
