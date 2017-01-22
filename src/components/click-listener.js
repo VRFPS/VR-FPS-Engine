@@ -2,14 +2,14 @@ AFRAME.registerComponent('click-listener', {
  init: function () {
    var el = this.el;
    if (AFRAME.utils.device.isMobile()) {
-     window.addEventListener('fire', function (evt) {
-       el.emit('fire', null, false)
+     window.addEventListener('click', function (evt) {
+       el.emit('click', null, false)
      })
    } else {
-     window.addEventListener('keyup', function (evt) {
-       if (evt.keyCode == 32 )
+     window.addEventListener('click', function (evt) {
+       // if (evt.keyCode == 32 )
         // document.getElementById('scene').onKeyDown('move')
-       el.emit('fire', null, false);
+       el.emit('click', null, false);
      });
    }
    console.log(this.el)
