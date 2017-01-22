@@ -41,14 +41,14 @@ AFRAME.registerComponent('projectile', {
             maxZ: currentEnemy.position.z + 2
           }
           let sphere = bullet.object3D.translateY(this.data.speed).position
-          // console.log(sphere)
-          if(intersect(sphere, box)) {
-            this.gameScore++;
             let target = this.targets[i];
+
+          if(intersect(sphere, box) && target.parentNode) {
+            this.gameScore++;
             target.parentNode.removeChild(target)
             bullet.parentNode.removeChild(bullet)
             this.targets.splice(i, 1);
-            return;
+            // return;
           }
         }
     }
