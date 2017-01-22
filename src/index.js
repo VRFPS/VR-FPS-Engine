@@ -8,3 +8,4 @@ require('./components/click-listener');
 require('./components/projectile');
 require('./components/spawner');
 require('./components/fence');
+require('./components/fall');
