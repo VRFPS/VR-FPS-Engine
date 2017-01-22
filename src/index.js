@@ -16,6 +16,5 @@ require('aframe-animation-component');
 require('./components/mobileMove');
 require('./components/entity-generator');
 require('./components/click-listener');
-require('./components/collider');
 require('./components/projectile');
 require('./components/spawner');
