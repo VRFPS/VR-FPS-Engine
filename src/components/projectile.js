@@ -48,7 +48,7 @@ AFRAME.registerComponent('projectile', {
             target.parentNode.removeChild(target)
             bullet.parentNode.removeChild(bullet)
             this.targets.splice(i, 1);
-            // return;
+            return;
           }
         }
     }
