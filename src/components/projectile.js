@@ -44,7 +44,9 @@ AFRAME.registerComponent('projectile', {
             let target = this.targets[i];
 
           if(intersect(sphere, box) && target.parentNode) {
-            this.gameScore++;
+            window.CABBAGES.currentScore++;
+            let score = document.getElementById('score')
+            score.innerText = `CABBAGES DESTROYED : ${window.CABBAGES.currentScore}`
             target.parentNode.removeChild(target)
             bullet.parentNode.removeChild(bullet)
             this.targets.splice(i, 1);

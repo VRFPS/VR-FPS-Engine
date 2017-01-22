@@ -6,8 +6,9 @@ AFRAME.registerComponent('entity-generator', {
 
   init: function () {
     var data = this.data;
+    const randomNum = Math.random() * 15
     // Create entities with supplied mixin.
-    for (var i = 0; i < data.num; i++) {
+    for (var i = 0; i < randomNum; i++) {
       var entity = document.createElement('a-entity');
       entity.setAttribute('mixin', data.mixin);
       entity.setAttribute('class', 'enemy')
@@ -17,7 +18,7 @@ AFRAME.registerComponent('entity-generator', {
   tick: function() {
     let enemies = document.querySelectorAll('.enemy');
 
-    if(!enemies.length) {
+    if(enemies.length === 1) {
       this.init()
     }
   }
