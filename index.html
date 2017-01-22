@@ -4,6 +4,7 @@
     <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.2.2/dist/aframe-extras.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v1.2.0/dist/aframe-physics-system.min.js"></script>
+    <script src="https://rawgit.com/atomicguy/aframe-fence-component/master/dist/aframe-fence-component.min.js"></script>
   </head>
   <body style="background-color: #030404">
     <i class="fa fa-crosshairs" style="color: white; position: absolute; top: 49%; left: 49.5%; z-index: 9999" aria-hidden="true"></i>
@@ -41,7 +42,7 @@
       <a-entity entity-generator="mixin: green candle position; num: 9;"></a-entity>
 
       <a-camera id="player" universal-controls position="1 1.8 0" spawner="mixin: laser" jump-ability="maxJumps: 2; distance: 10;" kinematic-body
-                click-listener></a-camera>
+                click-listener fence="width: 125; depth: 125;"></a-camera>
     </a-scene>
   </body>
 </html>
