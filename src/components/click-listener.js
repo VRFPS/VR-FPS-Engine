@@ -5,27 +5,36 @@ AFRAME.registerComponent('click-listener', {
      window.addEventListener('fire', function (evt) {
        el.emit('fire', null, false)
      })
+
    } else {
-     window.addEventListener('keyup', function (evt) {
-       if (evt.keyCode == 32 )
-        // document.getElementById('scene').onKeyDown('move')
-       el.emit('fire', null, false);
-     });
+     window.addEventListener('click', function (evt) {
+      // console.log(evt)
+      //  if (evt.keyCode == 86)
+        el.emit('fire', null, false);
+      })
+
+     //  window.addEventListener('click', function (evt) {
+     //    el.emit('fire', null, false)
+     //   })
+
+     //   window.remove
+
+     // // });
    }
    console.log(this.el)
- }
+  }
 
 });
 
 
-AFRAME.registerComponent('mobileClick-listener', {
- init: function () {
-   var el = this.el;
-     window.addEventListener('mobileFire', function (evt) {
-       el.emit('mobileFire', null, false)
-     })
+// AFRAME.registerComponent('mobileClick-listener', {
+//  init: function () {
+//    var el = this.el;
+//      window.addEventListener('mobileFire', function (evt) {
+//        el.emit('mobileFire', null, false)
+//      })
 
-   console.log(this.el)
- }
+//    console.log(this.el)
+//  }
 
-});
+// });

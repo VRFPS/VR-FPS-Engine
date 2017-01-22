@@ -10,9 +10,6 @@ AFRAME.registerComponent('projectile', {
       for (var i = 0; i < enemies.length; i++) {
         this.targets.push(enemies[i]);
       }
-      // console.log(this.targets)
-      // console.log(this.el.object3D)
-      // console.log(this.el.sceneEl.)
     },
 
   tick: function () {
@@ -44,14 +41,12 @@ AFRAME.registerComponent('projectile', {
             maxZ: currentEnemy.position.z + 2
           }
           let sphere = bullet.object3D.translateY(this.data.speed).position
-          // console.log(sphere)
           if(intersect(sphere, box)) {
             this.gameScore++;
             let target = this.targets[i];
             target.parentNode.removeChild(target)
             bullet.parentNode.removeChild(bullet)
             this.targets.splice(i, 1);
-            console.log(this.gameScore)
             return;
           }
         }
@@ -59,7 +54,3 @@ AFRAME.registerComponent('projectile', {
     bullet.object3D.translateY(this.data.speed)
   }
 });
-
-// var ray = new THREE.Raycaster( originPoint, directionVector.clone().normalize() );
-//       var collisionResults = ray.intersectObjects( sceneEl.object3D.children, true );
-//       collisionResults.forEach(hit);

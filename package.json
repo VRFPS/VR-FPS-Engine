@@ -28,11 +28,14 @@
   },
   "dependencies": {
     "aframe": "^0.4.1",
+    "aframe-always-fullscreen-component": "^1.0.0",
     "aframe-animation-component": "^3.2.0",
     "aframe-entity-generator-component": "^3.0.0",
     "aframe-extras": "^3.2.2",
     "aframe-particle-system-component": "^1.0.6",
+    "aframe-physics-system": "^1.2.0",
     "aframe-randomizer-components": "^3.0.1",
-    "cannon": "^0.6.2"
+    "cannon": "^0.6.2",
+    "hammerjs": "^2.0.8"
   }
 }

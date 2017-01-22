@@ -37,4 +37,5 @@ AFRAME.registerComponent('spawner', {
     });
     el.sceneEl.appendChild(entity);
   }
+
 });
