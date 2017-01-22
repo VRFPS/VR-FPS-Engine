@@ -6,10 +6,6 @@ AFRAME.registerComponent('spawner', {
   /**
    * Add event listener.
    */
-  // tick: function(time, timeDelta) {
-  //   if (timeDelta === 5000) el.emit('click', null, false)
-  // },
-
   update: function (oldData) {
     this.el.addEventListener(this.data.on, this.spawn.bind(this));
   },

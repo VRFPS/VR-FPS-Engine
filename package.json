@@ -30,7 +30,6 @@
     "aframe": "^0.4.1",
     "aframe-entity-generator-component": "^3.0.0",
     "aframe-extras": "^3.2.2",
-    "aframe-particle-system-component": "^1.0.6",
     "aframe-randomizer-components": "^3.0.1"
   }
 }

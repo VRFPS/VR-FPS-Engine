@@ -3,6 +3,7 @@ AFRAME.registerComponent('projectile', {
     speed: { default: -0.4 },
     target: { default: '.enemy' }
   },
+
   init: function () {
       let enemies = document.querySelectorAll('.enemy')
       this.targets = [];
@@ -10,9 +11,6 @@ AFRAME.registerComponent('projectile', {
       for (var i = 0; i < enemies.length; i++) {
         this.targets.push(enemies[i]);
       }
-      // console.log(this.targets)
-      // console.log(this.el.object3D)
-      // console.log(this.el.sceneEl.)
     },
 
   tick: function () {
@@ -30,7 +28,6 @@ AFRAME.registerComponent('projectile', {
     }
 
     let bullet = this.el;
-    // console.log(el.object3D.position.length())
       if (bullet.object3D.position.length() > 100 && bullet.parentEl) bullet.parentNode.removeChild(bullet)
       else if(this.targets.length !== 0 && bullet.parentEl) {
         for (let i = 0; i < this.targets.length; i++ ) {
@@ -51,7 +48,6 @@ AFRAME.registerComponent('projectile', {
             target.parentNode.removeChild(target)
             bullet.parentNode.removeChild(bullet)
             this.targets.splice(i, 1);
-            console.log(this.gameScore)
             return;
           }
         }
@@ -59,7 +55,3 @@ AFRAME.registerComponent('projectile', {
     bullet.object3D.translateY(this.data.speed)
   }
 });
-
-// var ray = new THREE.Raycaster( originPoint, directionVector.clone().normalize() );
-//       var collisionResults = ray.intersectObjects( sceneEl.object3D.children, true );
-//       collisionResults.forEach(hit);
