@@ -22,7 +22,7 @@
   },
   "engines": {
     "node": "7.1.0"
-  }
+  },
   "homepage": "https://github.com/dye784/Cabbage-Blaster#readme",
   "devDependencies": {
     "cross-env": "^2.0.1",
