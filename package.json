@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
-    "start": "npm run build & node server/index.js",
+    "start": "npm run build && node server/index.js",
     "start-dev": "webpack-dev-server --host 0.0.0.0 --progress --colors --hot -d --open --inline",
     "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress",
     "lint": "semistandard -v | snazzy"
