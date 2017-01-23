@@ -24,7 +24,7 @@ AFRAME.registerComponent('projectile', {
       var distance = Math.sqrt((x - sphere.x) * (x - sphere.x) +
                                (y - sphere.y) * (y - sphere.y) +
                                (z - sphere.z) * (z - sphere.z));
-      return distance < 0.15;
+      return distance < 0.25;
     }
 
     let bullet = this.el;
