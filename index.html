@@ -28,7 +28,7 @@
                  geometry="primitive: sphere; radius: 0.15"
                  material="color: red; metalness: 0.2; opacity: 0.4; roughness: 0.3; side: double"
                  rotation="90 0 0"
-                 projectile="speed: -0.1" collider-check="target: .enemy">
+                 projectile="speed: -0.25" collider-check="target: .enemy">
                  </a-mixin>
 
       </a-assets>
@@ -36,9 +36,8 @@
       <!-- ============================ ENTITIES ============================================================ -->
 
       <a-box id="ground"
-                geometry="primitive: box; width: 200; height: 0.02; depth: 200"
-                material="shader: flat; src: #floor" static-body
-                heightgrid="height: 1 2 2 1">
+                geometry="primitive: box; width: 200; height: 0.1; depth: 200"
+                material="shader: flat; src: #floor" static-body>
               </a-box>
 
       <a-entity id="sky"
