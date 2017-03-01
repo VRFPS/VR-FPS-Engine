@@ -12,18 +12,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dye784/Cabbage-Blaster.git"
+    "url": "git+https://github.com/VRFPS/VR-FPS-Engine.git"
   },
   "keywords": [],
   "author": "Bogdan Polovko, Damon Ye",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dye784/Cabbage-Blaster/issues"
+    "url": "https://github.com/VRFPS/VR-FPS-Engine/issues"
   },
   "engines": {
     "node": "7.1.0"
   },
-  "homepage": "https://github.com/dye784/Cabbage-Blaster#readme",
+  "homepage": "https://github.com/https://github.com/VRFPS/VR-FPS-Engine#readme",
   "devDependencies": {
     "cross-env": "^2.0.1",
     "semistandard": "^9.0.0",
