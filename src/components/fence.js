@@ -18,7 +18,6 @@ AFRAME.registerComponent('fence', {
       }
   },
 
-
   tick: function() {
       var data = this.data;
       var thiswidth = data.width;

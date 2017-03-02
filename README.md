@@ -37,3 +37,5 @@ npm start
 Then go to [http://localhost:1337/](http://localhost:1337/) and destroy!
 
 ### Special Thanks and Credits
+A-Painter for the sky and floor images
+[ngokevin](https://github.com/ngokevin) for the basic scaffolding for the shooting

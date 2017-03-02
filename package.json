@@ -32,7 +32,6 @@
   },
   "dependencies": {
     "aframe": "^0.4.1",
-    "aframe-entity-generator-component": "^3.0.0",
     "aframe-extras": "^3.2.2",
     "aframe-randomizer-components": "^3.0.1",
     "webpack": "^1.13.2"
