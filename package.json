@@ -23,7 +23,7 @@
   "engines": {
     "node": "7.1.0"
   },
-  "homepage": "https://github.com/https://github.com/VRFPS/VR-FPS-Engine#readme",
+  "homepage": "https://github.com/VRFPS/VR-FPS-Engine#readme",
   "devDependencies": {
     "cross-env": "^2.0.1",
     "semistandard": "^9.0.0",
