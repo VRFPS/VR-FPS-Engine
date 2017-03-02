@@ -7,7 +7,7 @@
     "build": "cross-env NODE_ENV=production webpack",
     "start": "node server/index.js",
     "start-dev": "webpack-dev-server --host 0.0.0.0 --progress --colors --hot -d --open --inline",
-    "heroku-postinstall": "webpack"
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",
