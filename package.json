@@ -7,8 +7,7 @@
     "build": "cross-env NODE_ENV=production webpack",
     "start": "node server/index.js",
     "start-dev": "webpack-dev-server --host 0.0.0.0 --progress --colors --hot -d --open --inline",
-    "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress",
-    "lint": "semistandard -v | snazzy"
+    "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress"
   },
   "repository": {
     "type": "git",
@@ -25,12 +24,10 @@
   },
   "homepage": "https://github.com/VRFPS/VR-FPS-Engine#readme",
   "devDependencies": {
-    "cross-env": "^2.0.1",
-    "semistandard": "^9.0.0",
-    "snazzy": "^4.0.1",
     "webpack-dev-server": "^1.16.1"
   },
   "dependencies": {
+    "cross-env": "^2.0.1",
     "aframe": "^0.4.1",
     "aframe-extras": "^3.2.2",
     "aframe-randomizer-components": "^3.0.1",
