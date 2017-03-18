@@ -3,7 +3,7 @@
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg?style=plastic)](http://vr.herokuapp.com/) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=plastic)](https://github.com/https://github.com/VRFPS/VR-FPS-Engine/blob/master/LICENSE)
 
 ### Introduction
-VR FPS Engine was a stackathon project built by Bogdan and Damon in the time span of 4 days. It is a simple boilerplate for virtual reality and first person shooter games. Using simple WASD and space to jump a player can go around the map destroying cabbages (boxes) that are randomly generated on the map. At a certain point the cabbages randomly generate again. A player can click to shoots a bullet. When the bullet collides with the cabbage, it disappears. The cabbages and bullet are customizable. Double jump is a thing.
+VR FPS Engine was a "stackathon" project built in the time span of 4 days. It is built on Mozilla's A-Frame web VR framework. It is a simple boilerplate for virtual reality and first person shooter games. Using simple WASD and space to jump a player can go around the map destroying cabbages (boxes) that are randomly generated on the map. At a certain point the cabbages randomly generate again. A player can click to shoots a bullet. When the bullet collides with the cabbage, it disappears. The cabbages and bullet are customizable. Double jump is a thing.
 
 ### Installation
 To use this simple boiler plate and modify it
