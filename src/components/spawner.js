@@ -1,24 +1,24 @@
 AFRAME.registerComponent('spawner', {
   schema: {
     on: { default: 'click' },
-    mixin: { default: '' }
+    mixin: { default: '' },
   },
   /**
    * Add event listener.
    */
-  update: function (oldData) {
+  update() {
     this.el.addEventListener(this.data.on, this.spawn.bind(this));
   },
   /**
    * Spawn new entity at entity's current position.
    */
-  spawn: function () {
-    var el = this.el;
-    var entity = document.createElement('a-entity');
-    var matrixWorld = el.object3D.matrixWorld;
-    var position = new THREE.Vector3();
-    var rotation = el.getAttribute('rotation');
-    var entityRotation;
+  spawn() {
+    const el = this.el;
+    const entity = document.createElement('a-entity');
+    const matrixWorld = el.object3D.matrixWorld;
+    const position = new THREE.Vector3();
+    const rotation = el.getAttribute('rotation');
+    let entityRotation;
     position.setFromMatrixPosition(matrixWorld);
     entity.setAttribute('position', position);
     // Have the spawned entity face the same direction as the entity.
@@ -26,13 +26,13 @@ AFRAME.registerComponent('spawner', {
     position.setFromMatrixPosition(matrixWorld);
     entity.setAttribute('position', position);
     entity.setAttribute('mixin', this.data.mixin);
-    entity.addEventListener('loaded', function () {
+    entity.addEventListener('loaded', () => {
       //changed getDeprecatedAttribute to getAttribute
       entityRotation = entity.getAttribute('rotation');
       entity.setAttribute('rotation', {
         x: entityRotation.x + rotation.x,
         y: entityRotation.y + rotation.y,
-        z: entityRotation.z + rotation.z
+        z: entityRotation.z + rotation.z,
       });
     });
     el.sceneEl.appendChild(entity);
