@@ -1,21 +1,18 @@
-'use strict'
+const express = require('express');
+const path = require('path');
 
-var express = require('express');
-var path = require('path');
+const app = express();
 
-var app = express();
-
-var isProduction = process.env.NODE_ENV === 'production';
-var port = isProduction ? process.env.PORT : 8080;
-console.log(port)
-var publicPath = path.resolve(__dirname, '..');
+const isProduction = process.env.NODE_ENV === 'production';
+const port = isProduction ? process.env.PORT : 8080;
+const publicPath = path.resolve(__dirname, '..');
 
 app.use(express.static(publicPath));
 
 app.use('/', (req, res, send) => {
-  res.sendFile(path.resolve(__dirname, '..', 'index.html'))
+  res.sendFile(path.resolve(__dirname, '..', 'index.html'));
 })
 
-app.listen(port, function () {
+app.listen(port, () => {
  console.log('Server running on port ' + port);
 });
