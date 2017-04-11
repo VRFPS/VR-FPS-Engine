@@ -16,16 +16,16 @@ AFRAME.registerComponent('projectile', {
   tick() {
     const intersect = (sphere, box) => {
       // get box closest point to sphere center by clamping
-      const x = Math.max(box.minX, Math.min(sphere.x, box.maxX));
-      const y = Math.max(box.minY, Math.min(sphere.y, box.maxY));
-      const z = Math.max(box.minZ, Math.min(sphere.z, box.maxZ));
+    const x = Math.max(box.minX, Math.min(sphere.x, box.maxX));
+    const y = Math.max(box.minY, Math.min(sphere.y, box.maxY));
+    const z = Math.max(box.minZ, Math.min(sphere.z, box.maxZ));
 
-      // this is the same as isPointInsideSphere
-      const distance = Math.sqrt((x - sphere.x) * (x - sphere.x) +
-                               (y - sphere.y) * (y - sphere.y) +
-                               (z - sphere.z) * (z - sphere.z));
-      return distance < 0.25;
-    };
+    // this is the same as isPointInsideSphere
+    const distance = Math.sqrt((x - sphere.x) * (x - sphere.x) +
+                             (y - sphere.y) * (y - sphere.y) +
+                             (z - sphere.z) * (z - sphere.z));
+    return distance < 0.25;
+  };
 
     const bullet = this.el;
     if (bullet.object3D.position.length() > 100 && bullet.parentEl) {
